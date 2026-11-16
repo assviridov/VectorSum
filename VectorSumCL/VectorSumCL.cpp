@@ -88,7 +88,7 @@ int main()
     clEnqueueNDRangeKernel(queue, kernel, 1, NULL, &global, NULL, 0, NULL, NULL);
     clFinish(queue);
 
-    // Читаем результаты (метки кластеров)
+    // Читаем результаты (массив сумм)
     clEnqueueReadBuffer(queue, bufC, CL_TRUE, 0, sizeof(int) * ARRAY_SIZE, C, 0, NULL, NULL);
 
  
